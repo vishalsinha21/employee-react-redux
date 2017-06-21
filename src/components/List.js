@@ -10,7 +10,6 @@ const List = () => (
       <div className="col-md-8 col-md-offset-2">
         <Header />
         <SubHeader />
-        <EmployeeFormContainer />
         <EmployeeListContainer />
       </div>
     </div>

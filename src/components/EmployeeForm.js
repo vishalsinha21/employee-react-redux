@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link, browserHistory } from 'react-router';
 
 const EmployeeForm = ({ onSubmit }) => (
   <form className="edit-employee-form" onSubmit={(e) => {
@@ -7,6 +8,7 @@ const EmployeeForm = ({ onSubmit }) => (
     onSubmit(document.getElementById("firstName").value,
       document.getElementById("lastName").value,
       document.getElementById("phone").value);
+    browserHistory.push('/')
   }}>
     <legend>New Employee</legend>
     <div className="form-group">
@@ -22,7 +24,11 @@ const EmployeeForm = ({ onSubmit }) => (
       <input className="form-control" id="phone" name="phone" component="input" type="text" placeholder="Phone" />
     </div>
     <hr/>
+    
+      
     <button type="submit" className="btn">Create</button>
+    <Link to="/" className="btn btn-danger">Cancel</Link>
+      
   </form>
 )
 
