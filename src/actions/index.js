@@ -20,3 +20,13 @@ export const addEmployee = (firstName = "first name", lastName = "last name", ph
   type: 'ADD_EMPLOYEE',
   firstName, lastName, phone
 })
+
+export const editEmployee = (firstName, lastName, phone) => ({
+  type: 'EDIT_EMPLOYEE',
+  firstName, lastName, phone
+})
+
+export const deleteEmployee = (id) => ({
+  type: 'DELETE_EMPLOYEE',
+  id
+})
