@@ -9,6 +9,7 @@ const EmployeeList = ({ employees }) => (
         <th>First Name</th>
         <th>Last Name</th>
         <th>Age</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
