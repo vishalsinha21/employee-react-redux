@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import CreateForm from './components/CreateForm'
 import EditForm from './components/EditForm'
 import List from './components/List'
+import EmployeeEditFormContainer from './containers/EmployeeEditFormContainer'
 import reducer from './reducers'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
@@ -18,7 +19,7 @@ render(
     <Router history={browserHistory}>
       <Route path="/" component={List} />
       <Route path="/new" component={CreateForm} />
-      <Route path="/edit/:id" component={EditForm} />
+      <Route path="/edit/:id" component={EmployeeEditFormContainer} />
     </Router>
   </Provider>,
   document.getElementById('root')
