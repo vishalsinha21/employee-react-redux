@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header'
-import EmployeeFormContainer from '../containers/EmployeeFormContainer'
+import EmployeeCreateFormContainer from '../containers/EmployeeCreateFormContainer'
 
 const CreateForm = () => (
   <div className="container">
@@ -8,7 +8,7 @@ const CreateForm = () => (
       <div className="col-md-8 col-md-offset-2">
         <div>
           <Header />
-          <EmployeeFormContainer />
+          <EmployeeCreateFormContainer />
         </div>
       </div>
     </div>

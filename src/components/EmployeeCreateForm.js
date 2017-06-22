@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, browserHistory } from 'react-router';
 
-const EmployeeForm = ({ onSubmit }) => (
+const EmployeeCreateForm = ({ onSubmit }) => (
   <form className="edit-employee-form" onSubmit={(e) => {
     e.preventDefault();
     onSubmit(document.getElementById("firstName").value,
@@ -32,5 +32,5 @@ const EmployeeForm = ({ onSubmit }) => (
   </form>
 )
 
-export default EmployeeForm
+export default EmployeeCreateForm
 

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import EmployeeForm from '../components/EmployeeForm'
+import EmployeeForm from '../components/EmployeeCreateForm'
 import { addEmployee } from '../actions'
 
 const mapStateToProps = (state, ownProps) => ({
@@ -12,9 +12,9 @@ const mapDispatchToProps = (dispatch) => ({
   }
 })
 
-const EmployeeFormContainer = connect(
+const EmployeeCreateFormContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(EmployeeForm)
 
-export default EmployeeFormContainer
+export default EmployeeCreateFormContainer

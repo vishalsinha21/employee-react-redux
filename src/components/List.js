@@ -2,7 +2,6 @@ import React from 'react'
 import Header from './Header'
 import EmployeeListContainer from '../containers/EmployeeListContainer'
 import SubHeader from '../containers/SubHeader'
-import EmployeeFormContainer from '../containers/EmployeeFormContainer'
 
 const List = () => (
   <div className="container">
