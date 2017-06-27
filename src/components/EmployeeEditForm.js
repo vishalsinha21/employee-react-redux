@@ -18,7 +18,6 @@ class EmployeeEditForm extends React.Component {
     }
   }
 
-
   render() {
     const employee = this.props.employee;
 
@@ -28,15 +27,15 @@ class EmployeeEditForm extends React.Component {
           <legend>Edit Employee</legend>
           <div className="form-group">
             <label>First Name</label>
-            <input value={employee.firstName} onChange={this.updateField(employee.id, "firstName")} className="form-control" id="firstName" name="firstName" component="input" type="text" placeholder="First Name" />
+            <input value={employee.firstName} onChange={this.updateField(employee.id, "firstName")} className="form-control" id="firstName" type="text" placeholder="First Name" />
           </div>
           <div className="form-group">
             <label>Last Name</label>
-            <input value={employee.lastName}  onChange={this.updateField(employee.id, "lastName")} className="form-control" id="lastName" name="lastName" component="input" type="text" placeholder="Last Name" />
+            <input value={employee.lastName}  onChange={this.updateField(employee.id, "lastName")} className="form-control" id="lastName" type="text" placeholder="Last Name" />
           </div>
           <div className="form-group">
             <label>Phone</label>
-            <input value={employee.phone} onChange={this.updateField(employee.id, "phone")} className="form-control" id="phone" name="phone" component="input" type="text" placeholder="Phone" />
+            <input value={employee.phone} onChange={this.updateField(employee.id, "phone")} className="form-control" id="phone" type="text" placeholder="Phone" />
           </div>
           <hr/>
           <Link to="/" className="btn">Edit</Link>
