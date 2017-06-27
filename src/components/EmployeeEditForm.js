@@ -39,8 +39,8 @@ class EmployeeEditForm extends React.Component {
           <hr/>
 
 
-          <button type="submit" className="btn">Edit</button>
-          <button type="submit" className="btn">Delete</button>
+          <Link to="/" className="btn">Edit</Link>
+          <button type="submit" className="btn btn-danger">Delete</button>
 
         </form>
     );
