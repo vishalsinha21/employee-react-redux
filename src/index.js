@@ -19,7 +19,7 @@ render(
     <Router history={browserHistory}>
       <Route path="/" component={List} />
       <Route path="/new" component={CreateForm} />
-      <Route path="/edit/:id" component={EmployeeEditFormContainer} />
+      <Route path="/edit/:id" component={EditForm} />
     </Router>
   </Provider>,
   document.getElementById('root')

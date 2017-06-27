@@ -24,33 +24,24 @@ class EmployeeEditForm extends React.Component {
 
     return (
 
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-md-offset-2">
-              <div>
-                <Header />
-                <form className="edit-employee-form" onSubmit={this.submitForm(employee.id)}>
-                  <legend>Edit Employee</legend>
-                  <div className="form-group">
-                    <label>First Name</label>
-                    <input value={employee.firstName} onChange={this.updateField(employee.id, "firstName")} className="form-control" id="firstName" name="firstName" component="input" type="text" placeholder="First Name" />
-                  </div>
-                  <div className="form-group">
-                    <label>Last Name</label>
-                    <input value={employee.lastName}  onChange={this.updateField(employee.id, "lastName")} className="form-control" id="lastName" name="lastName" component="input" type="text" placeholder="Last Name" />
-                  </div>
-                  <div className="form-group">
-                    <label>Phone</label>
-                    <input value={employee.phone} onChange={this.updateField(employee.id, "phone")} className="form-control" id="phone" name="phone" component="input" type="text" placeholder="Phone" />
-                  </div>
-                  <hr/>
-                  <Link to="/" className="btn">Edit</Link>
-                  <button type="submit" className="btn btn-danger">Delete</button>
-                </form>
-              </div>
-            </div>
+        <form className="edit-employee-form" onSubmit={this.submitForm(employee.id)}>
+          <legend>Edit Employee</legend>
+          <div className="form-group">
+            <label>First Name</label>
+            <input value={employee.firstName} onChange={this.updateField(employee.id, "firstName")} className="form-control" id="firstName" name="firstName" component="input" type="text" placeholder="First Name" />
           </div>
-        </div>
+          <div className="form-group">
+            <label>Last Name</label>
+            <input value={employee.lastName}  onChange={this.updateField(employee.id, "lastName")} className="form-control" id="lastName" name="lastName" component="input" type="text" placeholder="Last Name" />
+          </div>
+          <div className="form-group">
+            <label>Phone</label>
+            <input value={employee.phone} onChange={this.updateField(employee.id, "phone")} className="form-control" id="phone" name="phone" component="input" type="text" placeholder="Phone" />
+          </div>
+          <hr/>
+          <Link to="/" className="btn">Edit</Link>
+          <button type="submit" className="btn btn-danger">Delete</button>
+        </form>
     );
   }
 }

@@ -4,7 +4,7 @@ import { deleteEmployee, editEmployee, updateField } from '../actions'
 import _ from 'lodash';
 
 const mapStateToProps = (state, ownProps) => ({
-  employee: _.find(state.employees, {'id': ownProps.params.id})
+  employee: _.find(state.employees, {'id': ownProps.id})
 })
 
 const mapDispatchToProps = (dispatch) => ({
