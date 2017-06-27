@@ -8,7 +8,8 @@ class EmployeeCreateForm extends React.Component {
     super();
     this.submitForm = () => ev => {
       ev.preventDefault();
-      this.props.onSubmit(document.getElementById("firstName").value,
+      this.props.onSubmit(
+          document.getElementById("firstName").value,
           document.getElementById("lastName").value,
           document.getElementById("phone").value);
       browserHistory.push('/')
