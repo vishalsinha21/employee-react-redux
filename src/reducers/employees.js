@@ -22,6 +22,9 @@ const employeesArr = [
 ]
 
 const employees = (state = employeesArr, action) => {
+  console.log(state);
+  console.log(action);
+
   switch (action.type) {
     case "ADD_EMPLOYEE":
       return [
@@ -40,9 +43,16 @@ const employees = (state = employeesArr, action) => {
           state.map(employee => employee.id === action.id ?
           {...employee, firstName: action.firstName, lastName: action.lastName, phone: action.phone} :
           employee)
+    case "UPDATE_FIELD":
+        var newState = state.map(employee => employee.id === action.id ?
+        {...employee, [action.key]: action.value} :
+      employee)
+        console.log(newState);
+      return newState;
     default:
       return state
   }
+
 }
 
 export default employees

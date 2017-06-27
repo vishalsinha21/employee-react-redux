@@ -12,6 +12,9 @@ class EmployeeEditForm extends React.Component {
       this.props.onDelete(employeeId);
       browserHistory.push('/')
     }
+    this.updateField = (employeeId, key) => ev => {
+      this.props.updateField(employeeId, key, ev.target.value);
+    }
   }
 
 
@@ -23,15 +26,15 @@ class EmployeeEditForm extends React.Component {
           <legend>Edit Employee</legend>
           <div className="form-group">
             <label>First Name</label>
-            <input value={employee.firstName} className="form-control" id="firstName" name="firstName" component="input" type="text" placeholder="First Name" />
+            <input value={employee.firstName} onChange={this.updateField(employee.id, "firstName")} className="form-control" id="firstName" name="firstName" component="input" type="text" placeholder="First Name" />
           </div>
           <div className="form-group">
             <label>Last Name</label>
-            <input value={employee.lastName} className="form-control" id="lastName" name="lastName" component="input" type="text" placeholder="Last Name" />
+            <input value={employee.lastName}  onChange={this.updateField(employee.id, "lastName")} className="form-control" id="lastName" name="lastName" component="input" type="text" placeholder="Last Name" />
           </div>
           <div className="form-group">
             <label>Phone</label>
-            <input value={employee.phone} className="form-control" id="phone" name="phone" component="input" type="text" placeholder="Phone" />
+            <input value={employee.phone} onChange={this.updateField(employee.id, "phone")} className="form-control" id="phone" name="phone" component="input" type="text" placeholder="Phone" />
           </div>
           <hr/>
 
