@@ -22,8 +22,6 @@ const employeesArr = [
 ]
 
 const employees = (state = employeesArr, action) => {
-  console.log(state);
-  console.log(action);
 
   switch (action.type) {
     case "ADD_EMPLOYEE":
@@ -47,7 +45,6 @@ const employees = (state = employeesArr, action) => {
         var newState = state.map(employee => employee.id === action.id ?
         {...employee, [action.key]: action.value} :
       employee)
-        console.log(newState);
       return newState;
     default:
       return state
